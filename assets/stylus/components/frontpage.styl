@@ -1,0 +1,111 @@
+.main
+  absolute top 50% left 0 right 0
+  transform translateY(-50%)
+
+  figure
+    position relative
+    display inline-block
+    margin 0
+    
+    img
+      width 300px
+      position relative
+      filter blur(0)
+      -webkit-filter blur(0)
+      clip-path polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%)
+      -webkit-clip-path polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%)
+    
+      &:hover
+        filter blur(7px)
+        -webkit-filter blur(7px)
+
+      +mobile()
+        width 200px
+
+    figcaption
+      size 170px
+      absolute top 50% left 50%
+      background url(../img/easter-egg-blind.png) no-repeat 0 0
+      text-indent -9999em
+      z-index 999
+      opacity 0
+      pointer-events none
+      transition opacity .2s ease
+      transform translate(-50%, -50%)
+      
+      +below('m')
+        size 120px
+        background-size 120px 120px
+  
+    &:hover
+      figcaption
+        opacity 1
+
+  h1
+  h2
+    text-shadow 4px 4px 5px #000
+    
+
+  h1
+    font-size 6vw
+    margin 16px 0
+    
+    +below('l')
+      font-size 10vw
+
+  h2
+    font-size 3.75vw
+    margin-bottom 10px
+    
+    +below('l')
+      font-size 6vw
+  
+  .social-icons-list
+    
+    +below('m')
+      padding 0 10%
+    
+    li
+      display inline-block
+      margin 10px 10px
+      
+      .social-icon
+        size 48px
+        display block
+        text-indent -9999em
+        transition all .3s ease
+        filter grayscale(100%)
+        -webkit-filter grayscale(100%)
+        
+        &:hover
+          filter grayscale(0)
+          -webkit-filter grayscale(0)
+        
+        +below('l')
+          filter grayscale(0)
+          -webkit-filter grayscale(0)
+
+        &.social-icon-fb
+          background url(../img/webicon-facebook.svg) no-repeat 0 0
+        
+        &.social-icon-tw
+          background url(../img/webicon-twitter.svg) no-repeat 0 0
+        
+        &.social-icon-li
+          background url(../img/webicon-linkedin.svg) no-repeat 0 0
+        
+        &.social-icon-gh
+          background url(../img/webicon-github.svg) no-repeat 0 0
+        
+        &.social-icon-gp
+          background url(../img/webicon-googleplus.svg) no-repeat 0 0
+        
+        &.social-icon-ig
+          background url(../img/webicon-instagram.svg) no-repeat 0 0
+        
+        &.social-icon-sk
+          background url(../img/webicon-skype.svg) no-repeat 0 0
+        
+        &.social-icon-em
+          background url(../img/webicon-mail.svg) no-repeat 0 0
+  
